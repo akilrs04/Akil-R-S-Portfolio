@@ -1,0 +1,182 @@
+/* Top Attached Dynamic Island / Notch */
+.topNotch {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 110;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 1.15rem;
+  background: var(--notch-bg);
+  color: var(--notch-text);
+  font-size: 0.775rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  border: 1px solid var(--notch-border);
+  border-top: none;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  white-space: nowrap;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: transform var(--transition-base);
+}
+
+.topNotch:hover {
+  transform: translateX(-50%) translateY(2px);
+}
+
+.notchDot {
+  width: 7px;
+  height: 7px;
+  border-radius: var(--radius-full);
+  background-color: #ef4444;
+  box-shadow: 0 0 8px #ef4444;
+  animation: pulseDot 2s infinite ease-in-out;
+}
+
+@keyframes pulseDot {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(0.85);
+  }
+}
+
+/* Main Navigation Bar */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  background: rgba(251, 251, 250, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-subtle);
+  transition: background var(--transition-base), border-color var(--transition-base);
+}
+
+.navContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Brand Logo */
+.logo {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.65rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--brand-orange);
+  transition: transform var(--transition-fast);
+}
+
+.logo:hover {
+  transform: scale(1.02);
+}
+
+/* Nav Links */
+.navLinks {
+  display: none;
+  align-items: center;
+  gap: 2.25rem;
+}
+
+@media (min-width: 768px) {
+  .navLinks {
+    display: flex;
+  }
+}
+
+.navLink {
+  font-size: 0.925rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: color var(--transition-fast);
+  position: relative;
+  padding: 0.25rem 0;
+}
+
+.navLink:hover {
+  color: var(--text-primary);
+}
+
+.navLinkActive {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* Right Actions */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Pill Contact Button matching screenshot */
+.contactBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--pill-dark-bg);
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.55rem 1.45rem;
+  border-radius: var(--radius-full);
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-sm);
+  letter-spacing: -0.01em;
+}
+
+.contactBtn:hover {
+  background: var(--pill-dark-hover);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+  transform: translateY(-1px);
+}
+
+.mobileMenuBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-md);
+  background: var(--bg-card);
+  color: var(--text-primary);
+  border: 1px solid var(--border-subtle);
+}
+
+@media (min-width: 768px) {
+  .mobileMenuBtn {
+    display: none;
+  }
+}
+
+.mobileDrawer {
+  position: fixed;
+  top: var(--header-height);
+  left: 0;
+  right: 0;
+  background: var(--bg-primary);
+  border-bottom: 1px solid var(--border-subtle);
+  padding: 1.75rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  box-shadow: var(--shadow-lg);
+  z-index: 99;
+}

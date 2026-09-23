@@ -1,0 +1,77 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-base);
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.button:active {
+  transform: scale(0.98);
+}
+
+/* Variants */
+.primary {
+  background: var(--accent-gradient);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(99, 102, 241, 0.4);
+}
+
+.primary:hover {
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.6);
+  filter: brightness(1.08);
+}
+
+.secondary {
+  background: var(--bg-card);
+  color: var(--text-primary);
+  border: 1px solid var(--border-subtle);
+}
+
+.secondary:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-strong);
+}
+
+.outline {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border-strong);
+}
+
+.outline:hover {
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+}
+
+.ghost {
+  background: transparent;
+  color: var(--text-secondary);
+}
+
+.ghost:hover {
+  color: var(--text-primary);
+  background: var(--bg-card);
+}
+
+/* Sizes */
+.sm {
+  padding: 0.35rem 0.75rem;
+  font-size: 0.875rem;
+}
+
+.md {
+  padding: 0.6rem 1.25rem;
+  font-size: 0.95rem;
+}
+
+.lg {
+  padding: 0.85rem 1.75rem;
+  font-size: 1.05rem;
+  border-radius: var(--radius-lg);
+}

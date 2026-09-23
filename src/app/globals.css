@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500;1,6..72,600&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+@import "../styles/variables.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-serif: 'Newsreader', Georgia, serif;
+}
+
+/* Base Resets */
+html {
+  font-family: var(--font-sans);
+  background-color: #f7f7f6;
+  color: #121214;
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  background-color: #f7f7f6;
+  /* Ambient diagonal sunbeam / prism lighting across the page */
+  background-image: 
+    radial-gradient(ellipse at 15% 10%, rgba(255, 255, 255, 0.95) 0%, transparent 50%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.75) 0%, rgba(240, 240, 238, 0.35) 100%),
+    radial-gradient(circle at 85% 85%, rgba(0, 0, 0, 0.02) 0%, transparent 60%);
+  background-attachment: fixed;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f7f7f6;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d4d4d3;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a3a3a2;
+}
+
+@layer utilities {
+  /* Editorial Serif Font */
+  .font-editorial {
+    font-family: var(--font-serif);
+  }
+
+  /* Inline Capsule Images within Headline */
+  .capsule-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    height: 1.08em;
+    width: 2.25em;
+    border-radius: 9999px;
+    overflow: hidden;
+    position: relative;
+    margin-left: 0.22em;
+    margin-right: 0.22em;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.16);
+    border: 2.5px solid #111113;
+    transform: translateY(-0.06em);
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+  }
+
+  .capsule-pill:hover {
+    transform: translateY(-0.14em) scale(1.1);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+  }
+
+  .capsule-pill img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+}
