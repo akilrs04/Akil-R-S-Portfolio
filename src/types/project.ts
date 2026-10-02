@@ -8,7 +8,7 @@ export interface Project {
   thumbnail: string;
   images?: string[];
   tags: string[];
-  category: "Full-Stack" | "Frontend" | "Backend" | "AI/ML" | "Mobile";
+  category: "Full-Stack" | "Frontend" | "Backend" | "AI/ML" | "Mobile" | string;
   featured: boolean;
   liveUrl?: string;
   githubUrl?: string;

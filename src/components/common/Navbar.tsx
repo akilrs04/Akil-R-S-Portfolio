@@ -71,7 +71,7 @@ export function Navbar() {
             </div>
 
             <div className="pt-8 border-t border-neutral-200 text-sm text-neutral-500">
-              <p>© Akil R S. Based in Tokyo.</p>
+              <p>© Akil R S.</p>
               <p className="mt-1">Available for mindful collaborations.</p>
             </div>
           </div>

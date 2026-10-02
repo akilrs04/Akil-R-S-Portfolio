@@ -10,7 +10,7 @@ export function AboutSection() {
           </h2>
           <div className="space-y-4 text-neutral-600 text-sm sm:text-base leading-relaxed">
             <p>
-              Based in Tokyo, I partner with forward-thinking founders and established teams
+              I partner with forward-thinking founders and established teams
               to distill complex problem spaces into quiet, confident, and highly functional digital products.
             </p>
             <p>
@@ -30,7 +30,7 @@ export function AboutSection() {
             <div className="text-xs uppercase tracking-wider text-neutral-400 font-medium">Products Shipped</div>
           </div>
           <div className="bg-white/80 border border-black/5 rounded-2xl p-6 text-center shadow-sm">
-            <div className="font-serif text-3xl sm:text-4xl text-neutral-900 mb-1">Tokyo</div>
+            <div className="font-serif text-3xl sm:text-4xl text-neutral-900 mb-1">Remote</div>
             <div className="text-xs uppercase tracking-wider text-neutral-400 font-medium">Studio Base</div>
           </div>
           <div className="bg-white/80 border border-black/5 rounded-2xl p-6 text-center shadow-sm">
