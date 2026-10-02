@@ -57,11 +57,11 @@
 }
 
 [data-theme='dark'] {
-  --bg-primary: #0d0e11;
-  --bg-secondary: #141519;
-  --bg-tertiary: #1c1d22;
-  --bg-card: rgba(22, 24, 28, 0.85);
-  --bg-card-hover: #1f2127;
+  --bg-primary: #000000;
+  --bg-secondary: #0a0b0e;
+  --bg-tertiary: #141519;
+  --bg-card: rgba(18, 20, 24, 0.85);
+  --bg-card-hover: #191b20;
 
   --border-subtle: rgba(255, 255, 255, 0.08);
   --border-strong: rgba(255, 255, 255, 0.16);
